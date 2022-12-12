@@ -4,6 +4,7 @@ const locationsController = require("./controllers/locations.controller.js");
 const machinesController = require("./controllers/machines.controller");
 const personsController = require("./controllers/persons.controller");
 const plansController = require("./controllers/plans.controller");
+const specialEventController = require("./controllers/special-events.controller");
 
 // CONFIGURATION
 const app = express();
@@ -20,6 +21,8 @@ app.use("/machines", machinesController);
 app.use("/persons", personsController);
 
 app.use("/plans", plansController);
+
+app.use("/special-events", specialEventController);
 
 // EXPORT
 module.exports = app;
