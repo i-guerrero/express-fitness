@@ -24,5 +24,10 @@ app.use("/plans", plansController);
 
 app.use("/special-events", specialEventController);
 
+// 404 Error
+app.get("*", (req, res) => {
+  res.status(404).json({ error: "Sorry, no page found!" });
+});
+
 // EXPORT
 module.exports = app;
